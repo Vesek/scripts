@@ -10,4 +10,4 @@ cat > afkstart <<EOF
 cd ~/pyCraft
 python3 start.py -u $1 -p $2 -s simp.majnc.eu:25569
 EOF
-
+chmod +x afkstart
