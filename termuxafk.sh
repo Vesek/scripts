@@ -1,7 +1,11 @@
 #!/bin/sh
-cd ~
+if [ -d "~/pyCraft" ] 
+then
+    (cd ~/pyCraft && git fetch) 
+else
+    git clone https://github.com/ammaraskar/pyCraft.git ~/pyCraft
+fi
 pkg install git python
-git clone https://github.com/ammaraskar/pyCraft.git
 cat > ~/../usr/bin/$3 <<EOF
 #!/bin/sh
 cd ~/pyCraft
